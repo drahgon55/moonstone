@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ImageItem~ImageItem} kind.
 * @module moonstone/ImageItem
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control'),
-	Img = require('enyo/Image');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
+import Img from 'enyo/src/Image/Image.js';
 
-var
-	Item = require('../Item'),
-	LabeledTextItem = require('../LabeledTextItem');
+import Item from '../Item/Item.js';
+import LabeledTextItem from '../LabeledTextItem/LabeledTextItem.js';
 
 /**
 * {@link module:moonstone/ImageItem~ImageItem}, which derives from {@link module:moonstone/Item~Item}, is a control that combines an
@@ -25,7 +23,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ImageItem~ImageItem.prototype */ {
 
 	/**

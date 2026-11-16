@@ -1,17 +1,15 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ProgressButton~ProgressButton} kind.
 * @module moonstone/ProgressButton
 */
 
-var
-	kind = require('enyo/kind'),
-	Animator = require('enyo/Animator'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Animator from 'enyo/src/Animator.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Button = require('../Button');
+import Button from '../Button/Button.js';
 
 /**
 * Fires when progress button finishes animating to a position. No event-specific data is sent 
@@ -56,7 +54,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ProgressButton~ProgressButton.prototype */ {
 
 	/**

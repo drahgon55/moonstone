@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Marquee~MarqueeSupport} mixin and the {@link module:moonstone/Marquee~MarqueeText} &
@@ -6,19 +6,18 @@ require('moonstone');
 * @module moonstone/Marquee
 */
 
-var kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	platform = require('enyo/platform'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control'),
-	Component = require('enyo/Component'),
-	Signals = require('enyo/Signals');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import platform from 'enyo/src/platform.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
+import Component from 'enyo/src/Component.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	options = require('../options'),
-	HighlightText = require('../HighlightText');
+import options from '../options.js';
+import HighlightText from '../HighlightText/HighlightText.js';
 
-var exports = module.exports = {};
+var Marquee = {};
 
 /**
 * There are a couple scenarios (window blurs and changing from pointer mode to 5-way) in which
@@ -609,7 +608,7 @@ var MarqueeSupport = {
 	}
 };
 
-exports.Support = MarqueeSupport;
+Marquee.Support = MarqueeSupport;
 
 /**
 * The {@link module:moonstone/Marquee~MarqueeItem} mixin is used to add marquee animation functionality
@@ -1104,7 +1103,7 @@ var MarqueeItem = {
 	}
 };
 
-exports.Item = MarqueeItem;
+Marquee.Item = MarqueeItem;
 
 /**
 * {@link module:moonstone/Marquee~MarqueeText} is a basic text control that supports marquee animation.
@@ -1163,7 +1162,7 @@ exports.Item = MarqueeItem;
 * @ui
 * @public
 */
-exports.Text = kind(
+Marquee.Text = kind(
 	/** @lends module:moonstone/Marquee~MarqueeText.prototype */ {
 
 	/**
@@ -1272,4 +1271,6 @@ var MarqueeDecorator = kind(
 * The {@link module:moonstone/Marquee~MarqueeDecorator} export
 * @public
 */
-exports.Decorator = MarqueeDecorator;
+Marquee.Decorator = MarqueeDecorator;
+
+export default Marquee;

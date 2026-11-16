@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Divider~Divider} kind.
 * @module moonstone/Divider
 */
 
-var
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Marquee = require('../Marquee'),
-	MarqueeItem = Marquee.Item,
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeItem = Marquee.Item,
 	MarqueeSupport = Marquee.Support;
 
 /**
@@ -25,7 +23,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Divider~Divider.prototype */ {
 
 	/**

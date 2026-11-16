@@ -1,26 +1,22 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/IntegerPicker~IntegerPicker} kind.
 * @module moonstone/IntegerPicker
 */
 
-var
-	animation = require('enyo/animation'),
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	Control = require('enyo/Control'),
-	Scroller = require('enyo/Scroller');
+import animation from 'enyo/src/animation.js';
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import Control from 'enyo/src/Control/Control.js';
+import Scroller from 'enyo/src/Scroller/Scroller.js';
 
-var
-	FlyweightRepeater = require('layout/FlyweightRepeater');
+import FlyweightRepeater from 'layout/src/FlyweightRepeater.js';
 
-var
-	ScrollStrategy = require('../ScrollStrategy'),
-	TouchScrollStrategy = ScrollStrategy.Touch;
+import ScrollStrategy from '../ScrollStrategy/ScrollStrategy.js';
+var TouchScrollStrategy = ScrollStrategy.Touch;
 
-var
-	$L = require('../i18n');
+import $L from '../i18n.js';
 
 /**
 * Fires when the currently selected value changes.
@@ -55,7 +51,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/IntegerPicker~IntegerPicker.prototype */ {
 
 	/**

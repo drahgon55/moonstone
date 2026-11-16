@@ -2,8 +2,7 @@
 * Defines TV-specific resolution values. See {@link module:enyo/resolution} for more details.
 * @module moonstone/resolution
 */
-var
-	ri = require('enyo/resolution');
+import ri from 'enyo/src/resolution.js';
 
 ri.defineScreenTypes([
 	{name: 'hd',      pxPerRem: 16, width: 1280, height: 720,  aspectRatioName: 'hdtv'},
@@ -12,4 +11,4 @@ ri.defineScreenTypes([
 	{name: 'uhd',     pxPerRem: 48, width: 3840, height: 2160, aspectRatioName: 'hdtv'}
 ]);
 
-module.exports = ri;
+export default ri;

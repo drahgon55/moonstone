@@ -3,14 +3,12 @@
 * @module moonstone/VideoFullscreenToggleButton
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	$L = require('../i18n'),
-	IconButton = require('moonstone/IconButton');
+import $L from '../i18n.js';
+import IconButton from '../IconButton/IconButton.js';
 
 /**
 * {@link module:moonstone/VideoFullscreenToggleButton~VideoFullscreenToggleButton} is a specialized {@link module:moonstone/IconButton~IconButton};
@@ -22,7 +20,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/VideoFullscreenToggleButton~VideoFullscreenToggleButton */ {
 
 	/**

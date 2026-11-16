@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Spinner~Spinner} kind.
 * @module moonstone/Spinner
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Marquee = require('../Marquee'),
-	MarqueeText = Marquee.Text,
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeText = Marquee.Text,
 	MarqueeSupport = Marquee.Support;
 
 /**
@@ -52,7 +50,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Spinner~Spinner.prototype */ {
 
 	/**

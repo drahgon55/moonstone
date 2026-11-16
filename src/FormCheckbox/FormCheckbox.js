@@ -1,15 +1,13 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/FormCheckbox~FormCheckbox} kind.
 * @module moonstone/FormCheckbox
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	CheckboxItem = require('../CheckboxItem');
+import CheckboxItem from '../CheckboxItem/CheckboxItem.js';
 
 /**
 * {@link module:moonstone/FormCheckbox~FormCheckbox} is a labeled checkbox
@@ -23,7 +21,7 @@ var
 * @public
 */
 
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/FormCheckbox~FormCheckbox.prototype */ {
 
 	/**

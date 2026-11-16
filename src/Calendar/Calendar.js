@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Calendar~Calendar} kind.
@@ -6,21 +6,18 @@ require('moonstone');
 * @module moonstone/Calendar
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control'),
-	Group = require('enyo/Group');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
+import Group from 'enyo/src/Group/Group.js';
 
-var
-	ilib = require('enyo-ilib'),
-	calendarFactory = require('enyo-ilib/CalendarFactory'),
-	dateFactory = require('enyo-ilib/DateFactory'),
-	DateFmt = require('enyo-ilib/DateFmt'),
-	LocaleInfo = require('enyo-ilib/LocaleInfo');
+import ilib from 'enyo-ilib';
+import calendarFactory from 'enyo-ilib/ilib/lib/CalendarFactory.js';
+import dateFactory from 'enyo-ilib/ilib/lib/DateFactory.js';
+import DateFmt from 'enyo-ilib/ilib/lib/DateFmt.js';
+import LocaleInfo from 'enyo-ilib/ilib/lib/LocaleInfo.js';
 
-var
-	SimplePicker = require('../SimplePicker');
+import SimplePicker from '../SimplePicker/SimplePicker.js';
 
 /**
 * Fires when a date is selected. No additional data is passed in this event.
@@ -308,7 +305,7 @@ var SimpleMonthPicker = kind(
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Calendar~Calendar.prototype */ {
 
 	/**

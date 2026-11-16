@@ -1,15 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/HighlightText~HighlightText} kind.
 * @module moonstone/HighlightText
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	Control = require('enyo/Control'),
-	HTMLStringDelegate = require('enyo/HTMLStringDelegate');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import Control from 'enyo/src/Control/Control.js';
+import HTMLStringDelegate from 'enyo/src/HTMLStringDelegate.js';
 
 /**
 * Event sent to {@link module:moonstone/HighlightText~HighlightText} to turn on highlighting.
@@ -102,7 +101,7 @@ HighlightTextDelegate.generateInnerHtml = function (control) {
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/HighlightText~HighlightText.prototype */ {
 
 	/**

@@ -1,19 +1,18 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Tooltip~Tooltip} kind.
 * @module moonstone/Tooltip
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control'),
-	Popup = require('enyo/Popup'),
-	Component = require('enyo/Component'),
-	Signals = require('enyo/Signals'),
-	ri = require('enyo/resolution');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
+import Popup from 'enyo/src/Popup/Popup.js';
+import Component from 'enyo/src/Component.js';
+import Signals from 'enyo/src/Signals.js';
+import ri from 'enyo/src/resolution.js';
 
 var pointerTemplate = '<path d="M0,5C0,3,1,0,3,0H0V5Z"/>';
 
@@ -135,7 +134,7 @@ var TooltipContent = kind({
 * @ui
 * @public
 */
-module.exports = kind(
+var Tooltip_ = kind(
 	/** @lends module:moonstone/Tooltip~Tooltip.prototype */ {
 
 	/**
@@ -531,4 +530,6 @@ module.exports = kind(
 	]
 });
 
-module.exports.Content = TooltipContent;
+Tooltip_.Content = TooltipContent;
+
+export default Tooltip_;

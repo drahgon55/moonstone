@@ -4,17 +4,14 @@
 * @module moonstone/NewPagingControl
 */
 
-var
-	animation = require('enyo/animation'),
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils');
+import animation from 'enyo/src/animation.js';
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
 
-var
-	Spotlight = require('spotlight'),
-	$L = require('../i18n');
+import Spotlight from 'spotlight';
+import $L from '../i18n.js';
 
-var
-	IconButton = require('../IconButton');
+import IconButton from '../IconButton/IconButton.js';
 
 // TODO: Document the fact that this sends simulated mousewheel events
 
@@ -29,7 +26,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/NewPagingControl~PagingControl.prototype */ {
 
 	/**

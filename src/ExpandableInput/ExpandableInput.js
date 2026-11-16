@@ -1,22 +1,19 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ExpandableInput~ExpandableInput} kind.
 * @module moonstone/ExpandableInput
 */
 
-var
-	kind = require('enyo/kind'),
-	platform = require('enyo/platform');
+import kind from 'enyo/src/kind.js';
+import platform from 'enyo/src/platform.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	$L = require('../i18n'),
-	ExpandableListItem = require('../ExpandableListItem'),
-	Input = require('../Input'),
-	InputDecorator = require('../InputDecorator');
+import $L from '../i18n.js';
+import ExpandableListItem from '../ExpandableListItem/ExpandableListItem.js';
+import Input from '../Input/Input.js';
+import InputDecorator from '../InputDecorator/InputDecorator.js';
 
 /**
 * Fires when the current text changes. This passes through {@link module:enyo/Input~Input#onChange}.
@@ -36,7 +33,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandableInput~ExpandableInput.prototype */ {
 
 	/**

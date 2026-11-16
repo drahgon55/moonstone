@@ -1,25 +1,21 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Slider~Slider} kind.
 * @module moonstone/Slider
 */
 
-var
-	kind = require('enyo/kind'),
-	gesture = require('enyo/gesture'),
-	Control = require('enyo/Control'),
-	Animator = require('enyo/Animator');
+import kind from 'enyo/src/kind.js';
+import gesture from 'enyo/src/gesture/gesture.js';
+import Control from 'enyo/src/Control/Control.js';
+import Animator from 'enyo/src/Animator.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	ProgressBar = require('../ProgressBar'),
-	IconButton = require('../IconButton');
+import ProgressBar from '../ProgressBar/ProgressBar.js';
+import IconButton from '../IconButton/IconButton.js';
 
-var
-	$L = require('../i18n');
+import $L from '../i18n.js';
 
 /**
 * Fires when bar position is set.
@@ -66,7 +62,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Slider~Slider.prototype */ {
 
 	/**

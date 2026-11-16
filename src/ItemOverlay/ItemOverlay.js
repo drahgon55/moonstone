@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ItemOverlay~ItemOverlay}
@@ -6,9 +6,8 @@ require('moonstone');
 * @module moonstone/ItemOverlay
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
 /**
 * {@link module:moonstone/ItemOverlay~ItemOverlay} is a supplementary control that helps to manage
@@ -36,7 +35,7 @@ var
 * @ui
 * @public
 */
-var ItemOverlay = module.exports = kind(
+var ItemOverlay = kind(
 	/** @lends module:moonstone/ItemOverlay~ItemOverlay.prototype */ {
 
 	/**
@@ -211,3 +210,5 @@ ItemOverlay.ItemOverlaySupport = {
 		};
 	})
 };
+
+export default ItemOverlay;

@@ -1,25 +1,22 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/DataGridList~DataGridList} kind.
 * @module moonstone/DataGridList
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	util = require('enyo/utils'),
-	ri = require('enyo/resolution'),
-	DataGridList = require('enyo/DataGridList');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import util from 'enyo/src/utils.js';
+import ri from 'enyo/src/resolution.js';
+import DataGridList from 'enyo/src/DataGridList/DataGridList.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	DataList = require('../DataList'),
-	DataListSpotlightSupport = DataList.SpotlightSupport,
-	Scroller = require('../Scroller'),
-	ScrollStrategy = require('../ScrollStrategy');
+import DataList from '../DataList/DataList.js';
+import Scroller from '../Scroller/Scroller.js';
+import ScrollStrategy from '../ScrollStrategy/ScrollStrategy.js';
+var DataListSpotlightSupport = DataList.SpotlightSupport;
 
 /**
 * {@link module:moonstone/DataGridList~DataGridList} is an {@link module:enyo/DataGridList~DataGridList} with Moonstone visual
@@ -31,7 +28,7 @@ var
 * @ui
 * @public
 */
-var MoonDataGridList = module.exports = kind(
+var MoonDataGridList = kind(
 	/** @lends module:moonstone/DataGridList~DataGridList.prototype */ {
 
 	/**
@@ -225,3 +222,5 @@ kind.extendMethods(p, {
 		};
 	})
 }, true);
+
+export default MoonDataGridList;

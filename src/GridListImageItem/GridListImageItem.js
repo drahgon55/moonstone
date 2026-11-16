@@ -1,23 +1,20 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/GridListImageItem~GridListImageItem} kind.
 * @module moonstone/GridListImageItem
 */
 
-var
-	kind = require('enyo/kind'),
-	EnyoImage = require('enyo/Image');
+import kind from 'enyo/src/kind.js';
+import EnyoImage from 'enyo/src/Image/Image.js';
 
-var
-	GridListImageItem = require('layout/GridListImageItem');
+import GridListImageItem from 'layout/src/GridListImageItem/GridListImageItem.js';
 
-var
-	Img = require('../Image'),
-	Marquee = require('../Marquee'),
-	MarqueeSupport = Marquee.Support,
-	MarqueeText = Marquee.Text,
-	Overlay = require('../Overlay');
+import Img from '../Image/Image.js';
+import Marquee from '../Marquee/Marquee.js';
+import Overlay from '../Overlay/Overlay.js';
+var MarqueeSupport = Marquee.Support,
+	MarqueeText = Marquee.Text;
 
 /**
 * {@link module:moonstone/GridListImageItem~GridListImageItem} extends {@link module:layout/GridListImageItem~GridListImageItem}, adding
@@ -32,7 +29,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/GridListImageItem~GridListImageItem.prototype */ {
 
 	/**

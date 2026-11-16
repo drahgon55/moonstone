@@ -3,36 +3,31 @@
 * @module moonstone/Panels
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	dispatcher = require('enyo/dispatcher'),
-	dom = require('enyo/dom'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control'),
-	EnyoHistory = require('enyo/History'),
-	Signals = require('enyo/Signals'),
-	ri = require('enyo/resolution'),
-	ViewPreloadSupport = require('enyo/ViewPreloadSupport');
+import kind from 'enyo/src/kind.js';
+import dispatcher from 'enyo/src/dispatcher.js';
+import dom from 'enyo/src/dom.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
+import EnyoHistory from 'enyo/src/History.js';
+import Signals from 'enyo/src/Signals.js';
+import ri from 'enyo/src/resolution.js';
+import ViewPreloadSupport from 'enyo/src/ViewPreloadSupport.js';
 
-var
-	Panels = require('layout/Panels');
+import Panels from 'layout/src/Panels/Panels.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	$L = require('../i18n');
+import $L from '../i18n.js';
 
-var
-	ApplicationCloseButton = require('../ApplicationCloseButton'),
-	HistorySupport = require('../HistorySupport'),
-	MoonAnimator = require('../MoonAnimator'),
-	MoonArranger = require('../MoonArranger'),
-	MoonOptions = require('../options'),
-	Panel = require('../Panel'),
-	StyleAnimator = require('../StyleAnimator');
+import ApplicationCloseButton from '../ApplicationCloseButton/ApplicationCloseButton.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
+import MoonAnimator from '../MoonAnimator/MoonAnimator.js';
+import MoonArranger from '../MoonArranger/MoonArranger.js';
+import MoonOptions from '../options.js';
+import Panel from '../Panel/Panel.js';
+import StyleAnimator from '../StyleAnimator/StyleAnimator.js';
 
 /**
 * {@link module:moonstone/Panels~PanelsHandle} is a helper kind for
@@ -246,7 +241,7 @@ var Breadcrumb = kind(
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Panels~Panels.prototype */ {
 
 	/**

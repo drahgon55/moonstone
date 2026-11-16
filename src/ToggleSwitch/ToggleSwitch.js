@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ToggleSwitch~ToggleSwitch} kind.
 * @module moonstone/ToggleSwitch
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
 
-var
-	Checkbox = require('../Checkbox');
+import Checkbox from '../Checkbox/Checkbox.js';
 
 /**
 * {@link module:moonstone/ToggleSwitch~ToggleSwitch}, which extends {@link module:moonstone/Checkbox~Checkbox}, is a control
@@ -23,7 +21,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ToggleSwitch~ToggleSwitch.prototype */ {
 
 	/**

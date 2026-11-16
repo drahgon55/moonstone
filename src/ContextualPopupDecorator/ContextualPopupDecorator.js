@@ -1,19 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ContextualPopupDecorator~ContextualPopupDecorator} kind.
 * @module moonstone/ContextualPopupDecorator
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	Button = require('../Button');
+import Button from '../Button/Button.js';
 
 /**
 * {@link module:moonstone/ContextualPopupDecorator~ContextualPopupDecorator} is a control that loosely couples a
@@ -45,7 +42,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ContextualPopupDecorator~ContextualPopupDecorator.prototype */ {
 
 	/**

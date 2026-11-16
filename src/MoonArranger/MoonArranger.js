@@ -3,11 +3,10 @@
 * @module moonstone/MoonArranger
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	Arranger = require('layout/Arranger');
+import kind from 'enyo/src/kind.js';
+import Arranger from 'layout/src/Arranger/Arranger.js';
 
 /**
 *	{@link module:moonstone/MoonArranger~MoonArranger} is a
@@ -22,7 +21,7 @@ var
 * @extends module:layout/Arranger~Arranger
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/MoonArranger~MoonArranger.prototype */ {
 	name: 'moon.MoonArranger',
 	kind: Arranger,

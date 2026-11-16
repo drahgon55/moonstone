@@ -1,23 +1,21 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Header~Header} kind.
 * @module moonstone/Header
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	ri = require('enyo/resolution'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import ri from 'enyo/src/resolution.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Input = require('../Input'),
-	InputDecorator = require('../InputDecorator'),
-	StyleAnimator = require('../StyleAnimator'),
-	Marquee = require('../Marquee'),
-	MarqueeSupport = Marquee.Support,
+import Input from '../Input/Input.js';
+import InputDecorator from '../InputDecorator/InputDecorator.js';
+import StyleAnimator from '../StyleAnimator/StyleAnimator.js';
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeSupport = Marquee.Support,
 	MarqueeText = Marquee.Text;
 
 var _delayedMeasurementFinished;
@@ -53,7 +51,7 @@ var _delayedMeasurementFinished;
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Header~Header.prototype */ {
 
 	/**

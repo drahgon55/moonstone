@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ExpandableIntegerPicker~ExpandableIntegerPicker} kind.
 * @module moonstone/ExpandableIntegerPicker
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	ExpandableListItem = require('../ExpandableListItem'),
-	SimpleIntegerPicker = require('../SimpleIntegerPicker');
+import ExpandableListItem from '../ExpandableListItem/ExpandableListItem.js';
+import SimpleIntegerPicker from '../SimpleIntegerPicker/SimpleIntegerPicker.js';
 
 /**
 * Fires when the currently selected item changes.
@@ -39,7 +37,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandableIntegerPicker~ExpandableIntegerPicker.prototype */ {
 
 	/**

@@ -1,19 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/SimpleIntegerPicker~SimpleIntegerPicker} kind.
 * @module moonstone/SimpleIntegerPicker
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
 
-var
-	IntegerPicker = require('../IntegerPicker');
+import IntegerPicker from '../IntegerPicker/IntegerPicker.js';
 
-var
-	$L = require('../i18n');
+import $L from '../i18n.js';
 
 /**
 * Fires when the currently selected item changes.
@@ -61,7 +58,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/SimpleIntegerPicker~SimpleIntegerPicker.prototype */ {
 
 	/**

@@ -4,16 +4,14 @@
 * @module moonstone/ChannelInfo
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Marquee = require('moonstone/Marquee'),
-	MarqueeText = Marquee.Text,
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeText = Marquee.Text,
 	MarqueeSupport = Marquee.Support;
 
 
@@ -73,7 +71,7 @@ var ChannelInfoBadge = kind(
 * @ui
 * @public
 */
-module.exports = kind(
+var ChannelInfo_ = kind(
 	/** @lends module:moonstone/ChannelInfo~ChannelInfo.prototype */ {
 
 	/**
@@ -240,4 +238,6 @@ module.exports = kind(
 /**
 * The {@link module:moonstone/ChannelInfo~ChannelInfoBadge} definition
 */
-module.exports.ChannelInfoBadge = ChannelInfoBadge;
+ChannelInfo_.ChannelInfoBadge = ChannelInfoBadge;
+
+export default ChannelInfo_;

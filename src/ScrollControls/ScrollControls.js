@@ -3,18 +3,15 @@
 * @wip
 * @module moonstone/ScrollControls
 */
-var
-	dom = require('enyo/dom'),
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control'),
-	NewScrollThumb = require('enyo/NewThumb'),
-	Signals = require('enyo/Signals');
+import dom from 'enyo/src/dom.js';
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
+import NewScrollThumb from 'enyo/src/NewThumb/NewThumb.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	NewPagingControl = require('../NewPagingControl');
+import NewPagingControl from '../NewPagingControl/NewPagingControl.js';
 
 /**
 * TODO: {@link module:moonstone/ScrollControls~ScrollControls} needs to be documented.
@@ -24,7 +21,7 @@ var
 * @ui
 * @public
 */
-var ScrollControls = module.exports = kind(
+var ScrollControls = kind(
 	/** @lends module:moonstone/ScrollControls~ScrollControls.prototype */ {
 
 	/**
@@ -302,3 +299,5 @@ var ScrollControls = module.exports = kind(
 		return (Spotlight.getPointerMode() && this.hovering && !this.spotlightPagingControls);
 	}
 });
+
+export default ScrollControls;

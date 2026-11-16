@@ -3,12 +3,10 @@
 * @module moonstone/ExpandableListItem/ExpandableListItemDrawer
 */
 
-var
-	kind = require('enyo/kind'),
-	Drawer = require('enyo/Drawer');
+import kind from 'enyo/src/kind.js';
+import Drawer from 'enyo/src/Drawer.js';
 
-var
-	options = require('../options');
+import options from '../options.js';
 
 /**
 * @class ExpandableListItemDrawer
@@ -16,7 +14,7 @@ var
 * @ui
 * @private
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandableListItem/ExpandableListItemDrawer~ExpandableListItemDrawer.prototype */ {
 
 	/**

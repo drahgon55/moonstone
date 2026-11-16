@@ -1,4 +1,4 @@
-require('moonstone');
+import '../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/InputHeader~InputHeader} kind.
@@ -6,11 +6,9 @@ require('moonstone');
 * @deprecated
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	Header = require('./Header');
+import Header from './Header/Header.js';
 
 /**
 * {@link module:moonstone/InputHeader~InputHeader} is a header that uses an input for the title. While this
@@ -52,7 +50,7 @@ var
 * @public
 * @deprecated
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/InputHeader~InputHeader.prototype */ {
 
 	/**

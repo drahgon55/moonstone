@@ -3,20 +3,17 @@
 * @module moonstone/DayPicker
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	Signals = require('enyo/Signals');
+import kind from 'enyo/src/kind.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	ilib = require('enyo-ilib'),
-	DateFmt = require('enyo-ilib/DateFmt'),
-	LocaleInfo = require('enyo-ilib/LocaleInfo');
+import ilib from 'enyo-ilib';
+import DateFmt from 'enyo-ilib/ilib/lib/DateFmt.js';
+import LocaleInfo from 'enyo-ilib/ilib/lib/LocaleInfo.js';
 
-var
-	ExpandablePicker = require('../ExpandablePicker'),
-	$L = require('../i18n');
+import ExpandablePicker from '../ExpandablePicker/ExpandablePicker.js';
+import $L from '../i18n.js';
 
 /**
 * {@link module:moonstone/DayPicker~DayPicker}, which extends
@@ -46,7 +43,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/DayPicker~DayPicker.prototype */ {
 
 	/**

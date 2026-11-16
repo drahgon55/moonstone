@@ -1,15 +1,13 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/IconButton~IconButton} kind.
 * @module moonstone/IconButton
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	Icon = require('../Icon');
+import Icon from '../Icon/Icon.js';
 
 /**
 * {@link module:moonstone/IconButton~IconButton} is a {@link module:moonstone/Icon~Icon} that acts like a button. Specify
@@ -46,7 +44,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/IconButton~IconButton.prototype */ {
 
 	/**

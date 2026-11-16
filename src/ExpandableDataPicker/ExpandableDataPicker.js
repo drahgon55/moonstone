@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ExpandableDataPicker~ExpandableDataPicker} kind.
 * @module moonstone/ExpandableDataPicker
 */
 
-var
-	kind = require('enyo/kind'),
-	DataRepeater = require('enyo/DataRepeater');
+import kind from 'enyo/src/kind.js';
+import DataRepeater from 'enyo/src/DataRepeater.js';
 
-var
-	ExpandablePicker = require('../ExpandablePicker');
+import ExpandablePicker from '../ExpandablePicker/ExpandablePicker.js';
 
 /**
 * {@link module:moonstone/ExpandableDataPicker~ExpandableDataPicker}, which
@@ -37,7 +35,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandableDataPicker~ExpandableDataPicker.prototype */ {
 	
 	/**

@@ -1,20 +1,17 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Scroller~Scroller} kind.
 * @module moonstone/Scroller
 */
 
-var
-	kind = require('enyo/kind'),
-	Scroller = require('enyo/Scroller'),
-	Signals = require('enyo/Signals');
+import kind from 'enyo/src/kind.js';
+import Scroller from 'enyo/src/Scroller/Scroller.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	ScrollStrategy = require('../ScrollStrategy');
+import ScrollStrategy from '../ScrollStrategy/ScrollStrategy.js';
 
 
 	/**
@@ -47,7 +44,7 @@ var
 	* @ui
 	* @public
 	*/
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Scroller~Scroller.prototype */ {
 
 	/**

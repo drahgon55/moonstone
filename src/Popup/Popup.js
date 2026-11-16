@@ -1,26 +1,23 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Popup~Popup} kind.
 * @module moonstone/Popup
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control'),
-	EnyoHistory = require('enyo/History'),
-	Popup = require('enyo/Popup');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
+import EnyoHistory from 'enyo/src/History.js';
+import Popup from 'enyo/src/Popup/Popup.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	$L = require('../i18n'),
-	Scrim = require('../Scrim'),
-	Button = require('../Button'),
-	IconButton = require('../IconButton'),
-	HistorySupport = require('../HistorySupport');
+import $L from '../i18n.js';
+import Scrim from '../Scrim/Scrim.js';
+import Button from '../Button/Button.js';
+import IconButton from '../IconButton/IconButton.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
 
 /**
 * {@link module:moonstone/Popup~Popup} is an {@link module:enyo/Popup~Popup} that appears at the bottom of the
@@ -31,7 +28,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Popup~Popup.prototype */ {
 
 	/**

@@ -1,13 +1,12 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/TextArea~TextArea} kind.
 * @module moonstone/TextArea
 */
 
-var
-	kind = require('enyo/kind'),
-	TextArea = require('enyo/TextArea');
+import kind from 'enyo/src/kind.js';
+import TextArea from 'enyo/src/TextArea/TextArea.js';
 
 /**
 * {@link module:moonstone/TextArea~TextArea} is a Moonstone-styled text input
@@ -36,7 +35,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/TextArea~TextArea.prototype */ {
 
 	/**

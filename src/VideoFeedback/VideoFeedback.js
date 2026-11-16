@@ -3,16 +3,14 @@
 * @module moonstone/VideoFeedback
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	job = require('enyo/job'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import job from 'enyo/src/job.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Icon = require('moonstone/Icon');
+import Icon from '../Icon/Icon.js';
 
 /**
 * {@link module:moonstone/VideoFeedback~VideoFeedback} is a control used by {@link module:moonstone/VideoPlayer~VideoPlayer} to display
@@ -25,7 +23,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/VideoFeedback~VideoFeedback */ {
 
 	/**

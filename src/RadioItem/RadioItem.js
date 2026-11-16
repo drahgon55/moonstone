@@ -1,15 +1,13 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/RadioItem~RadioItem} kind.
 * @module moonstone/RadioItem
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	SelectableItem = require('../SelectableItem');
+import SelectableItem from '../SelectableItem/SelectableItem.js';
 
 /**
 * {@link module:moonstone/RadioItem~RadioItem} is a modified {@link module:moonstone/Item~Item} designed for use inside
@@ -24,7 +22,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/RadioItem~RadioItem.prototype */ {
 
 	/**

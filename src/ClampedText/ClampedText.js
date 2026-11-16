@@ -1,14 +1,13 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ClampedText~ClampedText} kind.
 * @module moonstone/ClampedText
 */
 
-var
-	dom = require('enyo/dom'),
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import dom from 'enyo/src/dom.js';
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
 /**
 * Limits the display of {@link module:enyo/Control~Control#content} to
@@ -27,7 +26,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ClampedText~ClampedText.prototype */ {
 
 	/**

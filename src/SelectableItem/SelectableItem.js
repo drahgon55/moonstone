@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/SelectableItem~SelectableItem} kind.
 * @module moonstone/SelectableItem
 */
 
-var
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils');
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
 
-var
-	Item = require('../Item');
+import Item from '../Item/Item.js';
 
 /**
 * Fires when the item is tapped. No event-specific data is sent with this event.
@@ -35,7 +33,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/SelectableItem~SelectableItem.prototype */ {
 
 	/**

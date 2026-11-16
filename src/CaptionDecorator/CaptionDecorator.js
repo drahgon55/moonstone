@@ -1,15 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/CaptionDecorator~CaptionDecorator} kind.
 * @module moonstone/CaptionDecorator
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	utils = require('enyo/utils'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import utils from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
 
 /**
 * {@link module:moonstone/CaptionDecorator~CaptionDecorator} wraps a control with a caption. The position of the
@@ -31,7 +30,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/CaptionDecorator~CaptionDecorator.prototype */ {
 
 	/**

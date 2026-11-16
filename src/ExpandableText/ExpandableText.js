@@ -1,17 +1,15 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ExpandableText~ExpandableText} kind.
 * @module moonstone/ExpandableText
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	$L = require('../i18n'),
-	ClampedText = require('../ClampedText');
+import $L from '../i18n.js';
+import ClampedText from '../ClampedText/ClampedText.js';
 
 
 /**
@@ -184,7 +182,7 @@ var ExpandableTextButton = kind(
 * @public
 */
 
-var ExpandableText = module.exports = kind(
+var ExpandableText = kind(
 	/** @lends module:moonstone/ExpandableText~ExpandableText.prototype */ {
 
 	/**
@@ -363,3 +361,5 @@ var ExpandableText = module.exports = kind(
 * Kind definition for {@link module:moonstone/ExpandableText~ExpandableTextButton}
 */
 ExpandableText.ExpandableTextButton = ExpandableTextButton;
+
+export default ExpandableText;

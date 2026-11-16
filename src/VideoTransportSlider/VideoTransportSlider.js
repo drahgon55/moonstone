@@ -3,29 +3,24 @@
 * @module moonstone/VideoTransportSlider
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	ri = require('enyo/resolution'),
-	Control = require('enyo/Control'),
-	Popup = require('enyo/Popup');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import ri from 'enyo/src/resolution.js';
+import Control from 'enyo/src/Control/Control.js';
+import Popup from 'enyo/src/Popup/Popup.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	DurationFmt = require('enyo-ilib/DurationFmt'),
-	Locale = require('enyo-ilib/Locale');
+import DurationFmt from 'enyo-ilib/ilib/lib/DurationFmt.js';
+import Locale from 'enyo-ilib/ilib/lib/Locale.js';
 
-var
-	Slider = require('moonstone/Slider'),
-	VideoFeedback = require('../VideoFeedback');
+import Slider from '../Slider/Slider.js';
+import VideoFeedback from '../VideoFeedback/VideoFeedback.js';
 
-var
-	$L = require('../i18n'),
-	defaultKnobIncrement = '5%';
+import $L from '../i18n.js';
+var defaultKnobIncrement = '5%';
 
 /**
 * The parameter [object]{@glossary Object} used when displaying a {@link module:moonstone/VideoFeedback~VideoFeedback}
@@ -103,7 +98,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/VideoTransportSlider~VideoTransportSlider.prototype */ {
 
 	/**

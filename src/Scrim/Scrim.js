@@ -1,13 +1,12 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Scrim~Scrim} kind.
 * @module moonstone/Scrim
 */
 
-var
-	kind = require('enyo/kind'),
-	Scrim = require('enyo/Scrim');
+import kind from 'enyo/src/kind.js';
+import Scrim from 'enyo/src/Scrim/Scrim.js';
 
 /**
 * {@link module:moonstone/Scrim~Scrim} is a Moonstone-styled
@@ -18,7 +17,7 @@ var
 * @ui
 * @public
 */
-var MoonScrim = module.exports = kind(
+var MoonScrim = kind(
 	/** @lends module:moonstone/Scrim~Scrim.prototype */ {
 
 	/**
@@ -39,3 +38,5 @@ var MoonScrim = module.exports = kind(
 
 new Scrim.ScrimSingleton(MoonScrim, 'scrim', {floating: true, classes: 'moon-scrim moon-scrim-translucent'});
 new Scrim.ScrimSingleton(MoonScrim, 'scrimTransparent', {floating: true, classes: 'moon-scrim moon-scrim-transparent'});
+
+export default MoonScrim;

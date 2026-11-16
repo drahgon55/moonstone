@@ -1,23 +1,20 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/InputDecorator~InputDecorator} kind.
 * @module moonstone/InputDecorator
 */
 
-var
-	kind = require('enyo/kind'),
-	ToolDecorator = require('enyo/ToolDecorator');
+import kind from 'enyo/src/kind.js';
+import ToolDecorator from 'enyo/src/ToolDecorator/ToolDecorator.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	$L = require('../i18n'),
-	Input = require('../Input'),
-	RichText = require('../RichText'),
-	TextArea = require('../TextArea'),
-	Tooltip = require('../Tooltip');
+import $L from '../i18n.js';
+import Input from '../Input/Input.js';
+import RichText from '../RichText/RichText.js';
+import TextArea from '../TextArea/TextArea.js';
+import Tooltip from '../Tooltip/Tooltip.js';
 
 /**
 * {@link module:moonstone/InputDecorator~InputDecorator} is a control that provides input styling. Any controls
@@ -63,7 +60,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/InputDecorator~InputDecorator.prototype */ {
 
 	/**

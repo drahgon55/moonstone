@@ -1,26 +1,22 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Drawers/Drawer~Drawer} kind.
 * @module moonstone/Drawers/Drawer
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	utils = require('enyo/utils'),
-	Animator = require('enyo/Animator'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import utils from 'enyo/src/utils.js';
+import Animator from 'enyo/src/Animator.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	FittableRows = require('layout/FittableRows');
+import FittableRows from 'layout/src/FittableRows.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	options = require('../options'),
-	HistorySupport = require('../HistorySupport');
+import options from '../options.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
 
 /**
 * Fires when either the main drawer or the control drawer is activated. No event-specific
@@ -91,7 +87,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Drawers/Drawer~Drawer.prototype */ {
 
 	/**

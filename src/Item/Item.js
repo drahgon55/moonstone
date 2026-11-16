@@ -1,17 +1,15 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Item~Item} kind.
 * @module moonstone/Item
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	Marquee = require('../Marquee'),
-	MarqueeSupport = Marquee.Support,
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeSupport = Marquee.Support,
 	MarqueeItem = Marquee.Item;
 
 /**
@@ -25,7 +23,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Item~Item.prototype */ {
 
 	/**

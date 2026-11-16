@@ -1,17 +1,15 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Checkbox~Checkbox} kind.
 * @module moonstone/Checkbox
 */
 
-var
-	kind = require('enyo/kind'),
-	ri = require('enyo/resolution'),
-	Checkbox = require('enyo/Checkbox');
+import kind from 'enyo/src/kind.js';
+import ri from 'enyo/src/resolution.js';
+import Checkbox from 'enyo/src/Checkbox/Checkbox.js';
 
-var
-	Icon = require('../Icon');
+import Icon from '../Icon/Icon.js';
 
 /**
 * {@link module:moonstone/Checkbox~Checkbox} is a box that, when tapped, shows or hides a checkmark
@@ -23,7 +21,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Checkbox~Checkbox.prototype */ {
 
 	/**

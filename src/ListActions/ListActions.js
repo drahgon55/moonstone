@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declarations for the {@link module:moonstone/ListActions~ListActions}
@@ -7,14 +7,12 @@ require('moonstone');
 * @module moonstone/ListActions
 */
 
-var
-	dom = require('enyo/dom'),
-	ri = require('enyo/resolution');
+import dom from 'enyo/src/dom.js';
+import ri from 'enyo/src/resolution.js';
 
-var
-	ContextualPopup = require('moonstone/ContextualPopup'),
-	ContextualPopupDecorator = require('moonstone/ContextualPopupDecorator'),
-	IconButton = require('moonstone/IconButton');
+import ContextualPopup from '../ContextualPopup/ContextualPopup.js';
+import ContextualPopupDecorator from '../ContextualPopupDecorator/ContextualPopupDecorator.js';
+import IconButton from '../IconButton/IconButton.js';
 
 /**
 * An internally-used support mixin added to a {@link module:moonstone/ListActions~ListActions}
@@ -326,4 +324,4 @@ var ListActions = ContextualPopupDecorator.kind({
 	}
 });
 
-module.exports = ListActions;
+export default ListActions;

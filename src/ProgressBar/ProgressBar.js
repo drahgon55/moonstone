@@ -1,25 +1,21 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ProgressBar~ProgressBar} kind.
 * @module moonstone/ProgressBar
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control'),
-	Animator = require('enyo/Animator');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
+import Animator from 'enyo/src/Animator.js';
 
-var
-	dom = require('enyo/dom'),
-	ri = require('enyo/resolution'),
-	util = require('enyo/utils'),
-	log = require('enyo/logger'),
-	Control = require('enyo/Control'),
-	Popup = require('enyo/Popup');
+import dom from 'enyo/src/dom.js';
+import ri from 'enyo/src/resolution.js';
+import util from 'enyo/src/utils.js';
+import log from 'enyo/src/logger.js';
+import Popup from 'enyo/src/Popup/Popup.js';
 
-var
-	NumFmt = require('enyo-ilib/NumFmt');
+import NumFmt from 'enyo-ilib/ilib/lib/NumFmt.js';
 
 /**
 * Fires when progress bar finishes animating to a position. No event-specific data
@@ -69,7 +65,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ProgressBar~ProgressBar.prototype */ {
 
 	/**

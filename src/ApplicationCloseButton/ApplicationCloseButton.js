@@ -1,20 +1,18 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ApplicationCloseButton~ApplicationCloseButton} kind.
 * @module moonstone/ApplicationCloseButton
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	ri = require('enyo/resolution');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import ri from 'enyo/src/resolution.js';
 
-var
-	$L = require('../i18n'),
-	TooltipDecorator = require('moonstone/TooltipDecorator'),
-	Tooltip = require('moonstone/Tooltip'),
-	IconButton = require('moonstone/IconButton');
+import $L from '../i18n.js';
+import TooltipDecorator from '../TooltipDecorator/TooltipDecorator.js';
+import Tooltip from '../Tooltip/Tooltip.js';
+import IconButton from '../IconButton/IconButton.js';
 
 var buttonDescription = $L('Exit app');
 
@@ -34,7 +32,7 @@ var buttonDescription = $L('Exit app');
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ApplicationCloseButton~ApplicationCloseButton.prototype */ {
 	/**
 	* @private

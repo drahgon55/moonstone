@@ -3,18 +3,16 @@
 * @module moonstone/VideoInfoHeader
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	ri = require('enyo/resolution'),
-	Control = require('enyo/Control'),
-	Img = require('enyo/Image');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import ri from 'enyo/src/resolution.js';
+import Control from 'enyo/src/Control/Control.js';
+import Img from 'enyo/src/Image/Image.js';
 
-var
-	Marquee = require('moonstone/Marquee'),
-	MarqueeText = Marquee.Text,
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeText = Marquee.Text,
 	MarqueeSupport = Marquee.Support;
 
 /**
@@ -45,7 +43,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/VideoInfoHeader~VideoInfoHeader.prototype */ {
 
 	/**

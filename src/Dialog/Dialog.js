@@ -1,24 +1,22 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Dialog~Dialog} kind.
 * @module moonstone/Dialog
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	ContentAreaSupport = require('enyo/ContentAreaSupport'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import ContentAreaSupport from 'enyo/src/ContentAreaSupport.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	$L = require('../i18n'),
-	Popup = require('../Popup'),
-	IconButton = require('../IconButton'),
-	BodyText = require('../BodyText'),
-	HistorySupport = require('../HistorySupport'),
-	Marquee = require('../Marquee'),
-	MarqueeText = Marquee.Text,
+import $L from '../i18n.js';
+import Popup from '../Popup/Popup.js';
+import IconButton from '../IconButton/IconButton.js';
+import BodyText from '../BodyText/BodyText.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeText = Marquee.Text,
 	MarqueeSupport = Marquee.Support;
 
 /**
@@ -31,7 +29,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Dialog~Dialog.prototype */ {
 
 	/**

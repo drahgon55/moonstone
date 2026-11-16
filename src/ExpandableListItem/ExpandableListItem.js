@@ -1,27 +1,23 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ExpandableListItem~ExpandableListItem} kind.
 * @module moonstone/ExpandableListItem
 */
 
-var
-	kind = require('enyo/kind'),
-	Component = require('enyo/Component'),
-	Control = require('enyo/Control'),
-	EnyoHistory = require('enyo/History'),
-	Group = require('enyo/Group');
+import kind from 'enyo/src/kind.js';
+import Component from 'enyo/src/Component.js';
+import Control from 'enyo/src/Control/Control.js';
+import EnyoHistory from 'enyo/src/History.js';
+import Group from 'enyo/src/Group/Group.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	HistorySupport = require('../HistorySupport'),
-	Item = require('../Item');
+import HistorySupport from '../HistorySupport/HistorySupport.js';
+import Item from '../Item/Item.js';
 
-var
-	ExpandableListItemHeader = require('./ExpandableListItemHeader'),
-	ExpandableListItemDrawer = require('./ExpandableListItemDrawer');
+import ExpandableListItemHeader from './ExpandableListItemHeader.js';
+import ExpandableListItemDrawer from './ExpandableListItemDrawer.js';
 
 /**
 * {@link module:moonstone/ExpandableListItem~ExpandableListItem}, which extends {@link module:moonstone/Item~Item}, displays a header
@@ -84,7 +80,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandableListItem~ExpandableListItem.prototype */ {
 
 	/**

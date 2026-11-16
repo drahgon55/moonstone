@@ -1,20 +1,18 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/SimplePicker~SimplePicker} kind.
 * @module moonstone/SimplePicker
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	$L = require('../i18n'),
-	IconButton = require('../IconButton'),
-	Marquee = require('../Marquee'),
-	MarqueeSupport = Marquee.Support,
+import $L from '../i18n.js';
+import IconButton from '../IconButton/IconButton.js';
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeSupport = Marquee.Support,
 	MarqueeText	= Marquee.Text;
 
 /**
@@ -70,7 +68,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/SimplePicker~SimplePicker.prototype */ {
 
 	/**

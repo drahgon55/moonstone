@@ -1,13 +1,12 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/BodyText~BodyText} kind.
 * @module moonstone/BodyText
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 /**
 * {@link module:moonstone/BodyText~BodyText} is a simple control for displaying body text in an app.
 * It is designed to align with other text-based controls.
@@ -17,7 +16,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/BodyText~BodyText.prototype */ {
 
 	/**

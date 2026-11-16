@@ -3,24 +3,20 @@
 * @module moonstone/Panel
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	dom = require('enyo/dom'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import dom from 'enyo/src/dom.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	FittableLayout = require('layout/FittableLayout'),
-	FittableRows = require('layout/FittableRows'),
-	FittableRowsLayout = FittableLayout.Rows;
+import FittableLayout from 'layout/src/FittableLayout/FittableLayout.js';
+import FittableRows from 'layout/src/FittableRows.js';
+var FittableRowsLayout = FittableLayout.Rows;
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	Header = require('moonstone/Header');
+import Header from '../Header/Header.js';
 
 /**
 * Fires when this [panel]{@link module:moonstone/Panel~Panel} has completed its pre-arrangement transition.
@@ -55,7 +51,7 @@ var
 * @public
 */
 
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Panel~Panel.prototype */ {
 
 	/**

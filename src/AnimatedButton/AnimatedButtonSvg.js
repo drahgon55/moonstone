@@ -1,15 +1,13 @@
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	EventEmitter = require('enyo/EventEmitter');
+import kind from 'enyo/src/kind.js';
+import EventEmitter from 'enyo/src/EventEmitter.js';
 
-var
-	SvgRoot = require('svg/Root'),
-	SvgPath = require('svg/Path'),
-	SvgAnimate = require('svg/Animate');
+import SvgRoot from 'svg/src/Root.js';
+import SvgPath from 'svg/src/Path.js';
+import SvgAnimate from 'svg/src/Animate.js';
 
-module.exports = kind({
+export default kind({
 	name: 'moon.AnimatedButtonSvg',
 	kind: SvgRoot,
 	mixins: [EventEmitter],

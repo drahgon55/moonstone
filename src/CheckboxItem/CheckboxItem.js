@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/CheckboxItem~CheckboxItem} kind.
 * @module moonstone/CheckboxItem
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	Checkbox = require('../Checkbox'),
-	Item = require('../Item'),
-	Marquee = require('../Marquee'),
-	MarqueeItem = Marquee.Item;
+import Checkbox from '../Checkbox/Checkbox.js';
+import Item from '../Item/Item.js';
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeItem = Marquee.Item;
 
 /**
 * Fires when the control is either checked or unchecked.
@@ -73,7 +71,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/CheckboxItem~CheckboxItem.prototype */ {
 
 	/**

@@ -6,11 +6,9 @@
 * @module moonstone/fonts
 */
 
-var
-	i18n = require('enyo/i18n');
+import i18n from 'enyo/src/i18n.js';
 
-var
-	Locale = require('enyo-ilib/Locale');
+import Locale from 'enyo-ilib/ilib/lib/Locale.js';
 
 /**
 * `moon-fonts` is the locale-specific font generator, allowing any locale to have its own custom

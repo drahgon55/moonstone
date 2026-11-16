@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/RadioItemGroup~RadioItemGroup} kind.
 * @module moonstone/RadioItemGroup
 */
 
-var
-	kind = require('enyo/kind'),
-	Group = require('enyo/Group');
+import kind from 'enyo/src/kind.js';
+import Group from 'enyo/src/Group/Group.js';
 
-var
-	RadioItem = require('../RadioItem');
+import RadioItem from '../RadioItem/RadioItem.js';
 
 /**
 * {@link module:moonstone/RadioItemGroup~RadioItemGroup} is a container in which
@@ -35,7 +33,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/RadioItemGroup~RadioItemGroup.prototype */ {
 
 	/**

@@ -3,13 +3,12 @@
 * @module moonstone/MoonAnimator
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Animator = require('enyo/Animator'),
-	animation = require('enyo/animation');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Animator from 'enyo/src/Animator.js';
+import animation from 'enyo/src/animation.js';
 
 
 
@@ -20,7 +19,7 @@ var
 * @extends module:enyo/Animator~Animator
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/MoonAnimator~MoonAnimator.prototype */ {
 
 	/**

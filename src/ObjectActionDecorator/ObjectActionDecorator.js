@@ -3,11 +3,10 @@
 * @module moonstone/ObjectActionDecorator
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
 /**
 * {@link module:moonstone/ObjectActionDecorator~ObjectActionDecorator} is a
@@ -49,7 +48,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ObjectActionDecorator~ObjectActionDecorator.prototype */ {
 
 	/**

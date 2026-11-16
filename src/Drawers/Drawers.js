@@ -1,28 +1,25 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Drawers~Drawers} kind.
 * @module moonstone/Drawers
 */
 
-var
-	kind = require('enyo/kind'),
-	dispatcher = require('enyo/dispatcher'),
-	Animator = require('enyo/Animator'),
-	Control = require('enyo/Control'),
-	Drawer = require('enyo/Drawer'),
-	EnyoHistory = require('enyo/History'),
-	dom = require('enyo/dom');
+import kind from 'enyo/src/kind.js';
+import dispatcher from 'enyo/src/dispatcher.js';
+import Animator from 'enyo/src/Animator.js';
+import Control from 'enyo/src/Control/Control.js';
+import Drawer from 'enyo/src/Drawer.js';
+import EnyoHistory from 'enyo/src/History.js';
+import dom from 'enyo/src/dom.js';
 
-var
-	options = require('../options'),
-	Icon = require('../Icon'),
-	Item = require('../Item'),
-	HistorySupport = require('../HistorySupport');
+import options from '../options.js';
+import Icon from '../Icon/Icon.js';
+import Item from '../Item/Item.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
 
-var
-	$L = require('../i18n'),
-	MoonDrawer = require('./Drawer');
+import $L from '../i18n.js';
+import MoonDrawer from './Drawer.js';
 
 /**
 * {@link module:moonstone/Drawers~Drawers} is a container kind designed to hold
@@ -68,7 +65,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+var Drawers_ = kind(
 	/** @lends module:moonstone/Drawers~Drawers.prototype */ {
 
 	/**
@@ -536,4 +533,6 @@ module.exports = kind(
 	]
 });
 
-module.exports.Drawer = MoonDrawer;
+Drawers_.Drawer = MoonDrawer;
+
+export default Drawers_;

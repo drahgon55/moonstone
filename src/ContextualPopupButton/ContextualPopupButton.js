@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ContextualPopupButton~ContextualPopupButton} kind.
@@ -6,11 +6,9 @@ require('moonstone');
 * @module moonstone/ContextualPopupButton
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	Button = require('../Button');
+import Button from '../Button/Button.js';
 
 /**
 * {@link module:moonstone/ContextualPopupButton~ContextualPopupButton} is a {@link module:moonstone/Button~Button} with additional
@@ -27,7 +25,7 @@ var
 * @deprecated
 */
 
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ContextualPopupButton~ContextualPopupButton.prototype */ {
 
 	/**

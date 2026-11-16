@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Image~Image} kind.
 * @module moonstone/Image
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control'),
-	Img = require('enyo/Image');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
+import Img from 'enyo/src/Image/Image.js';
 
-var
-	Icon = require('../Icon'),
-	Overlay = require('../Overlay');
+import Icon from '../Icon/Icon.js';
+import Overlay from '../Overlay/Overlay.js';
 
 /**
 * {@link module:moonstone/Image~Image} is a simple control that wraps an {@link module:enyo/Image~Image} to provide proper
@@ -45,7 +43,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Image~Image.prototype */ {
 
 	/**

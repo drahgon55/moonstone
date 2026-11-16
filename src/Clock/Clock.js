@@ -1,20 +1,18 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Clock~Clock} kind.
 * @module moonstone/Clock
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control'),
-	Signals = require('enyo/Signals');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	LocaleInfo = require('enyo-ilib/LocaleInfo'),
-	Locale = require('enyo-ilib/Locale'),
-	DateFmt = require('enyo-ilib/DateFmt'),
-	dateFactory = require('enyo-ilib/DateFactory');
+import LocaleInfo from 'enyo-ilib/ilib/lib/LocaleInfo.js';
+import Locale from 'enyo-ilib/ilib/lib/Locale.js';
+import DateFmt from 'enyo-ilib/ilib/lib/DateFmt.js';
+import dateFactory from 'enyo-ilib/ilib/lib/DateFactory.js';
 
 /**
 * Used to set a static time for {@link module:moonstone/Clock~Clock} to display.
@@ -47,7 +45,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Clock~Clock.prototype */ {
 
 	/**

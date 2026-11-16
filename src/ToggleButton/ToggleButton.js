@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ToggleButton~ToggleButton} kind.
 * @module moonstone/ToggleButton
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
 
-var
-	Button = require('../Button');
+import Button from '../Button/Button.js';
 
 /**
 * Fires when the value of the toggle button changes.
@@ -38,7 +36,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ToggleButton~ToggleButton.prototype */ {
 
 	/**

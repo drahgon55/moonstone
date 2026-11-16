@@ -1,29 +1,26 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ScrollStrategy~ScrollStrategy} kind.
 * @module moonstone/ScrollStrategy
 */
 
-var
-	kind = require('enyo/kind'),
-	dispatcher = require('enyo/dispatcher'),
-	dom = require('enyo/dom'),
-	util = require('enyo/utils'),
-	platform = require('enyo/platform'),
-	Control = require('enyo/Control'),
-	ScrollStrategy = require('enyo/ScrollStrategy'),
-	TouchScrollStrategy = require('enyo/TouchScrollStrategy'),
-	ScrollMath = require('enyo/ScrollMath'),
-	Signals = require('enyo/Signals');
+import kind from 'enyo/src/kind.js';
+import dispatcher from 'enyo/src/dispatcher.js';
+import dom from 'enyo/src/dom.js';
+import util from 'enyo/src/utils.js';
+import platform from 'enyo/src/platform.js';
+import Control from 'enyo/src/Control/Control.js';
+import ScrollStrategy from 'enyo/src/ScrollStrategy.js';
+import TouchScrollStrategy from 'enyo/src/TouchScrollStrategy.js';
+import ScrollMath from 'enyo/src/ScrollMath.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	config = require('../options'),
-	PagingControl = require('../PagingControl'),
-	ScrollThumb = require('../ScrollThumb');
+import config from '../options.js';
+import PagingControl from '../PagingControl/PagingControl.js';
+import ScrollThumb from '../ScrollThumb/ScrollThumb.js';
 
 function calcNodeVisibility (nodePos, nodeSize, scrollPos, scrollSize) {
 	return (nodePos >= scrollPos && nodePos + nodeSize <= scrollPos + scrollSize)
@@ -44,7 +41,7 @@ function calcNodeVisibility (nodePos, nodeSize, scrollPos, scrollSize) {
 * @extends module:enyo/TouchScrollStrategy~TouchScrollStrategy
 * @public
 */
-var MoonScrollStrategy = module.exports = kind(
+var MoonScrollStrategy = kind(
 	/** @lends module:moonstone/ScrollStrategy~ScrollStrategy.prototype */ {
 
 	/**
@@ -1325,3 +1322,5 @@ MoonScrollStrategy.Touch = kind({
 		}
 	}
 });
+
+export default MoonScrollStrategy;

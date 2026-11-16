@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Table~Table},
@@ -6,11 +6,13 @@ require('moonstone');
 * @module moonstone/Table
 */
 
-var
-	kind = require('enyo/kind'),
-	Table = require('enyo/Table'),
-	TableRow = require('enyo/TableRow'),
-	TableCell = require('enyo/TableCell');
+import kind from 'enyo/src/kind.js';
+// Renamed: moonstone declares kinds of the same names below. In CommonJS these
+// were `var` redeclarations and the enyo value was still in scope when the
+// `kind:` base was read; an import plus a `var` of one name is a SyntaxError.
+import EnyoTable from 'enyo/src/Table/Table.js';
+import EnyoTableRow from 'enyo/src/TableRow/TableRow.js';
+import EnyoTableCell from 'enyo/src/TableCell/TableCell.js';
 
 /**
 * {@link module:moonstone/Table~TableCell} extends {@link module:enyo/TableCell~TableCell},
@@ -32,7 +34,7 @@ var TableCell = kind(
 	/**
 	* @private
 	*/
-	kind: TableCell,
+	kind: EnyoTableCell,
 
 	/**
 	* @private
@@ -60,7 +62,7 @@ var TableRow = kind(
 	/**
 	* @private
 	*/
-	kind: TableRow,
+	kind: EnyoTableRow,
 
 	/**
 	* @private
@@ -86,7 +88,7 @@ var TableRow = kind(
 * @ui
 * @public
 */
-var Table = module.exports = kind(
+var Table = kind(
 	/** @lends module:moonstone/Table~Table.prototype */ {
 
 	/**
@@ -97,7 +99,7 @@ var Table = module.exports = kind(
 	/**
 	* @private
 	*/
-	kind: Table,
+	kind: EnyoTable,
 
 	/**
 	* @private
@@ -119,3 +121,5 @@ Table.Row = TableRow;
 * Exports {@link module:moonstone/Table~TableCell}
 */
 Table.Cell = TableCell;
+
+export default Table;

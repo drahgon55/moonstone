@@ -4,19 +4,16 @@
 * @module moonstone/NewDataList
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	NewDataList = require('enyo/NewDataList');
+import kind from 'enyo/src/kind.js';
+import NewDataList from 'enyo/src/NewDataList.js';
 
-var
-	Spotlight = require('spotlight'),
-	VDRSpotlightSupport = require('spotlight/VDRSpotlightSupport');
+import Spotlight from 'spotlight';
+import VDRSpotlightSupport from 'spotlight/src/VDRSpotlightSupport.js';
 
-var
-	Scrollable = require('../Scrollable'),
-	ScrollControls = require('../ScrollControls');
+import Scrollable from '../Scrollable/Scrollable.js';
+import ScrollControls from '../ScrollControls/ScrollControls.js';
 
 /**
 * A Moonstone NewDataList implementation. Currently under development.
@@ -27,7 +24,7 @@ var
 * @wip
 * @public
 */
-module.exports = kind({
+export default kind({
 	name: 'moon.NewDataList',
 	kind: NewDataList,
 	scrollControls: [{kind: ScrollControls}],

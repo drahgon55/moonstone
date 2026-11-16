@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * {@link module:moonstone/Overlay} contains a set of mixins that support
@@ -25,6 +25,8 @@ require('moonstone');
 * 		Overlay = require('moonstone/Overlay');
 *
 * 	// A control with a default Selection overlay
+var Overlay = {};
+
 * 	{kind: Control, mixins: [Overlay.Support, Overlay.Selection]}
 *
 * 	// A control with a Selection overlay and customized position and components
@@ -38,14 +40,12 @@ require('moonstone');
 * @module moonstone/Overlay
 */
 
-var
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils'),
-	Binding = require('enyo/Binding');
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
+import Binding from 'enyo/src/Binding.js';
 
-var
-	Icon = require('moonstone/Icon'),
-	Marquee = require('moonstone/Marquee');
+import Icon from '../Icon/Icon.js';
+import Marquee from '../Marquee/Marquee.js';
 
 /**
 * Maps the value of `overlayAlign` to the appropriate CSS class
@@ -181,7 +181,7 @@ function updateOwnership (components, owner) {
 * @mixin OverlaySupport
 * @public
 */
-module.exports.Support = {
+Overlay.Support = {
 
 	/**
 	* @private
@@ -330,7 +330,7 @@ module.exports.Support = {
 * @class OverlayComponentsBinding
 * @public
 */
-module.exports.ComponentsBinding = kind({
+Overlay.ComponentsBinding = kind({
 
 	/**
 	* @private
@@ -358,7 +358,7 @@ module.exports.ComponentsBinding = kind({
 * @mixin OverlayContainerSupport
 * @public
 */
-module.exports.Container = {
+Overlay.Container = {
 
 	/**
 	* @private
@@ -435,7 +435,7 @@ module.exports.Container = {
 * @mixin SelectionOverlaySupport
 * @public
 */
-module.exports.Selection = {
+Overlay.Selection = {
 
 	/**
 	* @private
@@ -563,7 +563,7 @@ module.exports.Selection = {
 * @mixin TextOverlaySupport
 * @public
 */
-module.exports.Text = {
+Overlay.Text = {
 
 	/**
 	* @private
@@ -631,7 +631,7 @@ module.exports.Text = {
 * @mixin MarqueeOverlaySupport
 * @public
 */
-module.exports.Marquee = {
+Overlay.Marquee = {
 
 	/**
 	* @private
@@ -688,3 +688,5 @@ module.exports.Marquee = {
 		};
 	})
 };
+
+export default Overlay;

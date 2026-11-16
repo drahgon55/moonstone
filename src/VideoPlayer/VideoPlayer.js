@@ -3,37 +3,32 @@
 * @module moonstone/VideoPlayer
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	dispatcher = require('enyo/dispatcher'),
-	dom = require('enyo/dom'),
-	gesture = require('enyo/gesture'),
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Animator = require('enyo/Animator'),
-	Control = require('enyo/Control'),
-	EnyoHistory = require('enyo/History'),
-	Signals = require('enyo/Signals'),
-	Video = require('enyo/Video');
+import dispatcher from 'enyo/src/dispatcher.js';
+import dom from 'enyo/src/dom.js';
+import gesture from 'enyo/src/gesture/gesture.js';
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Animator from 'enyo/src/Animator.js';
+import Control from 'enyo/src/Control/Control.js';
+import EnyoHistory from 'enyo/src/History.js';
+import Signals from 'enyo/src/Signals.js';
+import Video from 'enyo/src/Video.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	FittableColumns = require('layout/FittableColumns'),
-	Panels = require('enyo/LightPanels');
+import FittableColumns from 'layout/src/FittableColumns.js';
+import Panels from 'enyo/src/LightPanels/LightPanels.js';
 
-var
-	DurationFmt = require('enyo-ilib/DurationFmt');
+import DurationFmt from 'enyo-ilib/ilib/lib/DurationFmt.js';
 
-var
-	$L = require('../i18n'),
-	IconButton = require('moonstone/IconButton'),
-	HistorySupport = require('moonstone/HistorySupport'),
-	Spinner = require('moonstone/Spinner'),
-	VideoFullscreenToggleButton = require('../VideoFullscreenToggleButton'),
-	VideoTransportSlider = require('../VideoTransportSlider');
+import $L from '../i18n.js';
+import IconButton from '../IconButton/IconButton.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
+import Spinner from '../Spinner/Spinner.js';
+import VideoFullscreenToggleButton from '../VideoFullscreenToggleButton/VideoFullscreenToggleButton.js';
+import VideoTransportSlider from '../VideoTransportSlider/VideoTransportSlider.js';
 
 /**
 * Fires when [disablePlaybackControls]{@link module:moonstone/VideoPlayer~VideoPlayer#disablePlaybackControls}
@@ -106,7 +101,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/VideoPlayer~VideoPlayer.prototype */ {
 
 	/**

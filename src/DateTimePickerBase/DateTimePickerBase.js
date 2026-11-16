@@ -1,23 +1,20 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/DateTimePickerBase~DateTimePickerBase} kind.
 * @module moonstone/DateTimePickerBase
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control'),
-	Signals = require('enyo/Signals');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
+import Signals from 'enyo/src/Signals.js';
 
-var
-	ilib = require('enyo-ilib'),
-	dateFactory = require('enyo-ilib/DateFactory'),
-	DateFmt = require('enyo-ilib/DateFmt'),
-	Locale = require('enyo-ilib/Locale');
+import ilib from 'enyo-ilib';
+import dateFactory from 'enyo-ilib/ilib/lib/DateFactory.js';
+import DateFmt from 'enyo-ilib/ilib/lib/DateFmt.js';
+import Locale from 'enyo-ilib/ilib/lib/Locale.js';
 
-var
-	ExpandableListItem = require('../ExpandableListItem');
+import ExpandableListItem from '../ExpandableListItem/ExpandableListItem.js';
 
 /**
 * Fires when the picker's value changes.
@@ -41,7 +38,7 @@ var
 * @protected
 */
 
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/DateTimePickerBase~DateTimePickerBase.prototype */ {
 
 	/**

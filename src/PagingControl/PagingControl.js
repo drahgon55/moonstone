@@ -1,21 +1,18 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/PagingControl~PagingControl} kind.
 * @module moonstone/PagingControl
 */
 
-var
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils'),
-	animation = require('enyo/animation');
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
+import animation from 'enyo/src/animation.js';
 
-var
-	Spotlight = require('spotlight'),
-	$L = require('../i18n');
+import Spotlight from 'spotlight';
+import $L from '../i18n.js';
 
-var
-	IconButton = require('../IconButton');
+import IconButton from '../IconButton/IconButton.js';
 
 /**
 * Fires when page boundary is reached.
@@ -45,7 +42,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/PagingControl~PagingControl.prototype */ {
 
 	/**

@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/DataTable~DataTable} kind.
 * @module moonstone/DataTable
 */
 
-var
-	kind = require('enyo/kind'),
-	DataTable = require('enyo/DataTable');
+import kind from 'enyo/src/kind.js';
+import DataTable from 'enyo/src/DataTable.js';
 
-var
-	TableRow = require('enyo/TableRow');
+import TableRow from 'enyo/src/TableRow/TableRow.js';
 
 /**
 * {@link module:moonstone/DataTable~DataTable} is an {@link module:enyo/DataTable~DataTable} with Moonstone visual
@@ -21,7 +19,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/DataTable~DataTable.prototype */ {
 
 	/**

@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/StyleAnimator~StyleAnimator} kind.
@@ -7,12 +7,11 @@ require('moonstone');
 * @private
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	log = require('enyo/logger'),
-	utils = require('enyo/utils'),
-	Component = require('enyo/Component');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import log from 'enyo/src/logger.js';
+import utils from 'enyo/src/utils.js';
+import Component from 'enyo/src/Component.js';
 
 /**
 * @typedef {Object} module:moonstone/StyleAnimator~StyleAnimator~AnimationDefinitionObject
@@ -56,7 +55,7 @@ var
 * @private
 * @deprecated
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/StyleAnimator~StyleAnimator.prototype */ {
 
 	/**

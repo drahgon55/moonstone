@@ -1,13 +1,12 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/RichText~RichText} kind.
 * @module moonstone/RichText
 */
 
-var
-	kind = require('enyo/kind'),
-	RichText = require('enyo/RichText');
+import kind from 'enyo/src/kind.js';
+import RichText from 'enyo/src/RichText/RichText.js';
 
 /**
 * {@link module:moonstone/RichText~RichText} is a Moonstone-styled text input
@@ -37,7 +36,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/RichText~RichText.prototype */ {
 
 	/**

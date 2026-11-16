@@ -1,20 +1,17 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/DataList~DataList} kind.
 * @module moonstone/DataList
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	DataList = require('enyo/DataList');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import DataList from 'enyo/src/DataList/DataList.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	Scroller = require('../Scroller');
+import Scroller from '../Scroller/Scroller.js';
 
 /**
 * {@link module:moonstone/DataList~DataListSpotlightSupport} is a {@glossary mixin} that provides
@@ -565,7 +562,7 @@ var DataListSpotlightSupport = {
 * @ui
 * @public
 */
-var MoonDataList = module.exports = kind(
+var MoonDataList = kind(
 	/** @lends module:moonstone/DataList~DataList.prototype */ {
 
 	/**
@@ -677,3 +674,5 @@ var exts = {
 };
 kind.extendMethods(MoonDataList.delegates.vertical, exts, true);
 kind.extendMethods(MoonDataList.delegates.horizontal, exts, true);
+
+export default MoonDataList;

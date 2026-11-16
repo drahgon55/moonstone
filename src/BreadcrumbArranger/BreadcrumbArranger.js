@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/BreadcrumbArranger~BreadcrumbArranger} kind.
 * @module moonstone/BreadcrumbArranger
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	log = require('enyo/logger'),
-	ri = require('enyo/resolution');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import log from 'enyo/src/logger.js';
+import ri from 'enyo/src/resolution.js';
 
-var
-	DockRightArranger = require('layout/DockRightArranger');
+import DockRightArranger from 'layout/src/DockRightArranger.js';
 
 /**
 * @typedef {Object} module:moonstone/BreadcrumbArranger~BreadcrumbArranger~PanelInfoObject
@@ -65,7 +63,7 @@ var
 * @extends module:layout/DockRightArranger~DockRightArranger
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/BreadcrumbArranger~BreadcrumbArranger.prototype */ {
 
 	/**

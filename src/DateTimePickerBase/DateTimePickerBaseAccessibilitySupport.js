@@ -4,14 +4,13 @@
 * @module moonstone/DateTimePickerBase/DateTimePickerBaseAccessibilitySupport
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
 /**
 * @name DateTimePickerBaseAccessibilitySupport
 * @mixin
 */
-module.exports = {
+export default {
 
 	/*
 	* @private

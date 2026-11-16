@@ -1,17 +1,15 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Input~Input} kind.
 * @module moonstone/Input
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Input = require('enyo/Input');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Input from 'enyo/src/Input/Input.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
 /**
 * {@link module:moonstone/Input~Input} is a Moonstone-styled input control, derived from
@@ -38,7 +36,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Input~Input.prototype */ {
 
 	/**

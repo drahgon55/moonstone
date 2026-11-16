@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/AudioPlayback~AudioPlayback}
@@ -7,20 +7,20 @@ require('moonstone');
 * @module moonstone/AudioPlayback
 */
 
-var
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils'),
-	EnyoAudio = require('enyo/Audio'),
-	Signals = require('enyo/Signals'),
-	EventEmitter = require('enyo/EventEmitter');
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
+import EnyoAudio from 'enyo/src/Audio.js';
+import Signals from 'enyo/src/Signals.js';
+import EventEmitter from 'enyo/src/EventEmitter.js';
 
 
-var
-	Drawer = require('moonstone/Drawers').Drawer,
-	IconButton = require('moonstone/IconButton'),
-	MoonImage = require('moonstone/Image'),
-	Slider = require('moonstone/Slider'),
-	Marquee = require('moonstone/Marquee');
+import IconButton from '../IconButton/IconButton.js';
+import MoonImage from '../Image/Image.js';
+import Slider from '../Slider/Slider.js';
+import Marquee from '../Marquee/Marquee.js';
+import Drawers from '../Drawers/Drawers.js';
+
+var Drawer = Drawers.Drawer;
 
 /**
 * Fires when an audio track is added to the list
@@ -68,7 +68,7 @@ var
 * @wip
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/AudioPlayback~AudioPlayback.prototype */ {
 
 	/**

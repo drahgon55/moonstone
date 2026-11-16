@@ -1,16 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/LabeledTextItem~LabeledTextItem} kind.
 * @module moonstone/LabeledTextItem
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	Item = require('../Item'),
-	Marquee = require('../Marquee');
+import Item from '../Item/Item.js';
+import Marquee from '../Marquee/Marquee.js';
 
 /**
 * {@link module:moonstone/LabeledTextItem~LabeledTextItem}, which extends {@link module:moonstone/Item~Item}, is a
@@ -22,7 +20,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/LabeledTextItem~LabeledTextItem.prototype */ {
 
 	/**

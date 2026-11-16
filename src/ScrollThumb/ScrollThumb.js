@@ -1,14 +1,13 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ScrollThumb~ScrollThumb} kind.
 * @module moonstone/ScrollThumb
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	ScrollThumb = require('enyo/ScrollThumb');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import ScrollThumb from 'enyo/src/ScrollThumb/ScrollThumb.js';
 
 /**
 * {@link module:moonstone/ScrollThumb~ScrollThumb}, which extends
@@ -22,7 +21,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ScrollThumb~ScrollThumb.prototype */ {
 
 	/**

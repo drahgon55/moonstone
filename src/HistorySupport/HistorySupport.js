@@ -1,4 +1,4 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Mixin that enables support for custom history.
@@ -6,9 +6,8 @@ require('moonstone');
 * @module moonstone/HistorySupport
 */
 
-var
-	EnyoHistory = require('enyo/History'),
-	kind = require('enyo/kind');
+import EnyoHistory from 'enyo/src/History.js';
+import kind from 'enyo/src/kind.js';
 
 /**
 * {@link module:moonstone/HistorySupport} is a {@glossary mixin} that enables
@@ -97,4 +96,4 @@ var HistorySupport = {
 	})
 };
 
-module.exports = HistorySupport;
+export default HistorySupport;

@@ -1,15 +1,13 @@
-require('moonstone');
+import '../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Accordion~Accordion} kind.
 * @module moonstone/Accordion
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	ExpandableListItem = require('./ExpandableListItem');
+import ExpandableListItem from './ExpandableListItem/ExpandableListItem.js';
 
 /**
 * [Please note that `moonstone/Accordion` has been deprecated because of its
@@ -69,7 +67,7 @@ var
 * @public
 * @deprecated Identical to {@link module:moonstone/ExpandableListItem~ExpandableListItem}
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Accordion~Accordion.prototype */ {
 
 	/**

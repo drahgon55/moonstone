@@ -3,13 +3,11 @@
 * @wip
 * @module moonstone/Scrollable
 */
-var
-	kind = require('enyo/kind'),
-	utils = require('enyo/utils'),
-	ScrollMath = require('enyo/ScrollMath');
+import kind from 'enyo/src/kind.js';
+import utils from 'enyo/src/utils.js';
+import ScrollMath from 'enyo/src/ScrollMath.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
 /**
 * The Scrollable mixin
@@ -233,4 +231,4 @@ var Scrollable = {
 	})
 };
 
-module.exports = Scrollable;
+export default Scrollable;

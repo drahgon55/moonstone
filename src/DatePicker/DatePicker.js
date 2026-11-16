@@ -1,20 +1,17 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/DatePicker~DatePicker} kind.
 * @module moonstone/DatePicker
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
-var
-	dateFactory = require('enyo-ilib/DateFactory');
+import dateFactory from 'enyo-ilib/ilib/lib/DateFactory.js';
 
-var
-	DateTimePickerBase = require('../DateTimePickerBase'),
-	$L = require('../i18n'),
-	IntegerPicker = require('../IntegerPicker');
+import DateTimePickerBase from '../DateTimePickerBase/DateTimePickerBase.js';
+import $L from '../i18n.js';
+import IntegerPicker from '../IntegerPicker/IntegerPicker.js';
 
 /**
 * {@link module:moonstone/DatePicker~DatePicker} is a control used to allow the selection of (or simply
@@ -38,7 +35,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/DatePicker~DatePicker.prototype */ {
 
 	/**

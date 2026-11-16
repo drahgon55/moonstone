@@ -1,15 +1,14 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Icon~Icon} kind.
 * @module moonstone/Icon
 */
 
-var
-	kind = require('enyo/kind'),
-	ri = require('enyo/resolution'),
-	path = require('enyo/pathResolver'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import ri from 'enyo/src/resolution.js';
+import path from 'enyo/src/pathResolver.js';
+import Control from 'enyo/src/Control/Control.js';
 
 // Static private hash of all of the valid moonstone icons
 var icons = {
@@ -121,7 +120,7 @@ var icons = {
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Icon~Icon.prototype */ {
 
 	/**

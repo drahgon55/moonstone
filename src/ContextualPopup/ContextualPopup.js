@@ -1,30 +1,26 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ContextualPopup~ContextualPopup} kind.
 * @module moonstone/ContextualPopup
 */
 
-var
-	kind = require('enyo/kind'),
-	dom = require('enyo/dom'),
-	ri = require('enyo/resolution'),
-	util = require('enyo/utils'),
-	Control = require('enyo/Control'),
-	EnyoHistory = require('enyo/History'),
-	Popup = require('enyo/Popup');
+import kind from 'enyo/src/kind.js';
+import dom from 'enyo/src/dom.js';
+import ri from 'enyo/src/resolution.js';
+import util from 'enyo/src/utils.js';
+import Control from 'enyo/src/Control/Control.js';
+import EnyoHistory from 'enyo/src/History.js';
+import Popup from 'enyo/src/Popup/Popup.js';
 
-var
-	ContextualLayout = require('layout/ContextualLayout');
+import ContextualLayout from 'layout/src/ContextualLayout/ContextualLayout.js';
 
-var
-	Spotlight = require('spotlight');
+import Spotlight from 'spotlight';
 
-var
-	$L = require('../i18n'),
-	IconButton = require('../IconButton'),
-	Scrim = require('moonstone/Scrim'),
-	HistorySupport = require('../HistorySupport');
+import $L from '../i18n.js';
+import IconButton from '../IconButton/IconButton.js';
+import Scrim from '../Scrim/Scrim.js';
+import HistorySupport from '../HistorySupport/HistorySupport.js';
 
 /**
 * Fires when the contextual popup is to be shown.
@@ -63,7 +59,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ContextualPopup~ContextualPopup.prototype */ {
 
 	/**

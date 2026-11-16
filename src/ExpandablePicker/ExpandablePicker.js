@@ -1,19 +1,17 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/ExpandablePicker~ExpandablePicker} kind.
 * @module moonstone/ExpandablePicker
 */
 
-var
-	kind = require('enyo/kind'),
-	Component = require('enyo/Component'),
-	Group = require('enyo/Group');
+import kind from 'enyo/src/kind.js';
+import Component from 'enyo/src/Component.js';
+import Group from 'enyo/src/Group/Group.js';
 
-var
-	BodyText = require('../BodyText'),
-	CheckboxItem = require('../CheckboxItem'),
-	ExpandableListItem = require('../ExpandableListItem');
+import BodyText from '../BodyText/BodyText.js';
+import CheckboxItem from '../CheckboxItem/CheckboxItem.js';
+import ExpandableListItem from '../ExpandableListItem/ExpandableListItem.js';
 
 /**
 * Fires when the currently selected item changes.
@@ -86,7 +84,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandablePicker~ExpandablePicker.prototype */ {
 
 	/**

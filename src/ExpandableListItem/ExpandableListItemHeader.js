@@ -3,13 +3,11 @@
 * @module moonstone/ExpandableListItem/ExpandableListItemHeader
 */
 
-var
-	kind = require('enyo/kind'),
-	Component = require('enyo/Component');
+import kind from 'enyo/src/kind.js';
+import Component from 'enyo/src/Component.js';
 
-var
-	Marquee = require('../Marquee'),
-	LabeledTextItem = require('../LabeledTextItem');
+import Marquee from '../Marquee/Marquee.js';
+import LabeledTextItem from '../LabeledTextItem/LabeledTextItem.js';
 
 /**
 * @class ExpandableListItemHeader
@@ -17,7 +15,7 @@ var
 * @ui
 * @private
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/ExpandableListItem/ExpandableListItemHeader~ExpandableListItemHeader.prototype */ {
 
 	/**

@@ -4,12 +4,10 @@
 * @module moonstone/LightPanels
 */
 
-var
-	kind = require('enyo/kind'),
-	LightPanels = require('enyo/LightPanels');
+import kind from 'enyo/src/kind.js';
+import LightPanels from 'enyo/src/LightPanels/LightPanels.js';
 
-var
-	LightPanel = require('./LightPanel');
+import LightPanel from './LightPanel.js';
 
 /**
 * A lightweight panels implementation that has basic support for side-to-side transitions
@@ -21,7 +19,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+var LightPanels_ = kind(
 	/** @lends module:moonstone/LightPanels~LightPanels.prototype */ {
 
 	/**
@@ -96,6 +94,8 @@ module.exports = kind(
 * The {@link module:moonstone/LightPanels~LightPanel} kind export.
 * @public
 */
-module.exports.Panel = LightPanel;
-module.exports.Direction = LightPanels.Direction;
-module.exports.Orientation = LightPanels.Orientation;
+LightPanels_.Panel = LightPanel;
+LightPanels_.Direction = LightPanels.Direction;
+LightPanels_.Orientation = LightPanels.Orientation;
+
+export default LightPanels_;

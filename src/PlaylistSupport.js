@@ -1,4 +1,4 @@
-require('moonstone');
+import '../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/PlaylistSupport~PlaylistSupport}
@@ -7,8 +7,7 @@ require('moonstone');
 * @module moonstone/PlaylistSupport
 */
 
-var
-	kind = require('enyo/kind');
+import kind from 'enyo/src/kind.js';
 
 /**
 * The {@link module:moonstone/PlaylistSupport~PlaylistSupport} {@glossary mixin}
@@ -392,4 +391,4 @@ var PlaylistSupport = {
 	}
 };
 
-module.exports = PlaylistSupport;
+export default PlaylistSupport;

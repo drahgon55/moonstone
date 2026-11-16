@@ -4,15 +4,13 @@
 * @module moonstone/AnimatedButton
 */
 
-require('moonstone');
+import '../../index.js';
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
 
-var
-	Button = require('moonstone/Button'),
-	AnimatedButtonSvg = require('./AnimatedButtonSvg');
+import Button from '../Button/Button.js';
+import AnimatedButtonSvg from './AnimatedButtonSvg.js';
 
 /**
 * {@link module:moonstone/AnimatedButton~AnimatedButton} is a
@@ -30,7 +28,7 @@ var
 * @wip
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/AnimatedButton~AnimatedButton.prototype */ {
 
 	/**

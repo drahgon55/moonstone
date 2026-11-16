@@ -1,12 +1,10 @@
-require('moonstone');
+import '../../index.js';
 
-var
-	Component = require('enyo/Component'),
-	EnyoHistory = require('enyo/History'),
-	kind = require('enyo/kind');
+import Component from 'enyo/src/Component.js';
+import EnyoHistory from 'enyo/src/History.js';
+import kind from 'enyo/src/kind.js';
 
-var
-	Support = require('../HistorySupport');
+import Support from '../HistorySupport/HistorySupport.js';
 
 /**
 * The `History` singleton provides an abstract way of handling historical state in an app,
@@ -18,7 +16,7 @@ var
 * @deprecated History API moved into {@link module:enyo/History} and mixin into
 * 	{@link module:moonstone/HistorySupport}
 */
-var MoonHistory = module.exports = kind.singleton(
+var MoonHistory = kind.singleton(
 	/** @lends module:moonstone/History */ {
 
 	/**
@@ -109,3 +107,5 @@ var MoonHistory = module.exports = kind.singleton(
 * The {@link module:moonstone/HistorySupport~HistorySupport} mixin.
 */
 MoonHistory.HistorySupport = Support;
+
+export default MoonHistory;

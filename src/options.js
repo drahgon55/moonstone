@@ -1,6 +1,5 @@
-var
-	utils = require('enyo/utils'),
-	options = require('enyo/options');
+import utils from 'enyo/src/utils.js';
+import options from 'enyo/src/options.js';
 
 var config = global.moon && global.moon.config;
 
@@ -10,7 +9,7 @@ var config = global.moon && global.moon.config;
 * @param {Boolean} Set accelerate `false` to prefer position properties over CSS transforms.
 * @module moonstone/options
 */
-module.exports = utils.mixin({
+export default utils.mixin({
 	/** @lends module:moonstone/options */
 	accelerate: true,
 	renderOnShow: {

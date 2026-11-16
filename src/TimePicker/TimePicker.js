@@ -1,23 +1,20 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/TimePicker~TimePicker} kind.
 * @module moonstone/TimePicker
 */
 
-var
-	kind = require('enyo/kind'),
-	Control = require('enyo/Control');
+import kind from 'enyo/src/kind.js';
+import Control from 'enyo/src/Control/Control.js';
 
-var
-	dateFactory = require('enyo-ilib/DateFactory'),
-	DateFmt = require('enyo-ilib/DateFmt'),
-	LocaleInfo = require('enyo-ilib/LocaleInfo');
+import dateFactory from 'enyo-ilib/ilib/lib/DateFactory.js';
+import DateFmt from 'enyo-ilib/ilib/lib/DateFmt.js';
+import LocaleInfo from 'enyo-ilib/ilib/lib/LocaleInfo.js';
 
-var
-	DateTimePickerBase = require('../DateTimePickerBase'),
-	$L = require('../i18n'),
-	IntegerPicker = require('../IntegerPicker');
+import DateTimePickerBase from '../DateTimePickerBase/DateTimePickerBase.js';
+import $L from '../i18n.js';
+import IntegerPicker from '../IntegerPicker/IntegerPicker.js';
 
 /**
 * {@link module:moonstone/TimePicker~MeridiemPicker} is a helper kind used by {@link module:moonstone/TimePicker~TimePicker}.
@@ -375,7 +372,7 @@ var HourPicker = kind(
 * @ui
 * @public
 */
-var TimePicker = module.exports = kind(
+var TimePicker = kind(
 	/** @lends module:moonstone/TimePicker~TimePicker.prototype */ {
 
 	/**
@@ -782,3 +779,5 @@ var TimePicker = module.exports = kind(
 TimePicker.HourPicker = HourPicker;
 TimePicker.MinutePicker = MinutePicker;
 TimePicker.MeridiemPicker = MeridiemPicker;
+
+export default TimePicker;

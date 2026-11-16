@@ -1,18 +1,16 @@
-require('moonstone');
+import '../../index.js';
 
 /**
 * Contains the declaration for the {@link module:moonstone/Button~Button} kind.
 * @module moonstone/Button
 */
 
-var
-	kind = require('enyo/kind'),
-	util = require('enyo/utils'),
-	Button = require('enyo/Button');
+import kind from 'enyo/src/kind.js';
+import util from 'enyo/src/utils.js';
+import Button from 'enyo/src/Button/Button.js';
 
-var
-	Marquee = require('../Marquee'),
-	MarqueeSupport = Marquee.Support,
+import Marquee from '../Marquee/Marquee.js';
+var MarqueeSupport = Marquee.Support,
 	MarqueeText = Marquee.Text;
 
 /**
@@ -29,7 +27,7 @@ var
 * @ui
 * @public
 */
-module.exports = kind(
+export default kind(
 	/** @lends module:moonstone/Button~Button.prototype */ {
 
 	/**
